@@ -1,5 +1,3 @@
-# trabajo-dise-o
-
 # SmartLibrary
 
 Proyecto académico en Java estándar para un taller de Diseño de Software. Administra usuarios, libros y ejemplares físicos, préstamos con renovaciones, reservas y notificaciones. El ejemplo de `Main` demuestra las relaciones del modelo sin base de datos ni frameworks.
@@ -14,21 +12,21 @@ Proyecto académico en Java estándar para un taller de Diseño de Software. Adm
 | R13 | `Notificable` define el comportamiento de recibir mensajes y `Estudiante` lo implementa. |
 | R14 | Paquetes `usuarios`, `catalogo`, `prestamos` y `reservas` separan las cuatro funciones. |
 
-## Relaciones UML
+## Diagramas UML
 
-Los diagramas editables están en `diagramas/clases.drawio` y `diagramas/componentes.drawio` (XML de draw.io).
+Las imágenes muestran el diseño; los archivos `.drawio` de `diagramas/` permiten editarlo en draw.io.
 
-```text
-Usuario <|-- Estudiante
-Usuario <|-- Bibliotecario
-Notificable <|.. Estudiante
-Libro "1" o-- "1..*" Ejemplar
-Prestamo "1" *-- "0..*" Renovacion
-Estudiante "1" -- "0..*" Prestamo
-Ejemplar "1" -- "0..*" Prestamo
-Estudiante "1" -- "0..*" Reserva
-Libro "1" -- "0..*" Reserva
-```
+### Diagrama de clases
+
+![Diagrama UML de clases de SmartLibrary](diagramas/imagenes/clases.jpeg)
+
+### Diagrama de componentes
+
+![Diagrama UML de componentes de SmartLibrary](diagramas/imagenes/componentes.jpeg)
+
+### Trazabilidad de requisitos
+
+![Trazabilidad de R10 a R14](diagramas/imagenes/trazabilidad.jpeg)
 
 **Herencia:** Estudiante y Bibliotecario son tipos de Usuario y comparten identificación, nombre y correo. Cada uno conserva sus datos específicos.
 
